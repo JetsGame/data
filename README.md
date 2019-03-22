@@ -1,7 +1,9 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2602515.svg)](https://doi.org/10.5281/zenodo.2602515)
+
 Data
 ====
 
-This repository contains a range of jet-related data sets.
+This is a git-lfs repository containing a range of jet-related data sets.
 
 There are 3 types of processes, simulated with Pythia 8.223:
 
