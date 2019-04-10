@@ -1,35 +1,36 @@
-# condor_exec.exe -pythia8 -dijets -ptmin 500.0 -out-jet /afs/cern.ch/user/f/frdreyer/work/JetsGame/extra/delphes/output/QCD_500GeV_delphes -out /afs/cern.ch/user/f/frdreyer/work/JetsGame/extra/delphes/output/QCD_500GeV_delphes_hist.dat -nev 1e6 -ptmin_gen 400 -nimg 500000 
-# Time started: 2019-04-09 04:41:52 (CEST) on host b7w09n0009.cern.ch.(none) in directory /pool/condor/dir_19084
-# generator is: Pythia8, version 8.223, tune py8tune_4C, rnd sequence -1, pi0 decay 0, B decay 0
+# condor_exec.exe -pythia8 -dijets -ptmin 500.0 -out-jet /afs/cern.ch/user/f/frdreyer/work/JetsGame/extra/delphes/output/test_QCD_500GeV_delphes_mjchgpjot012 -out /afs/cern.ch/user/f/frdreyer/work/JetsGame/extra/delphes/output/test_QCD_500GeV_delphes_mjchgpjot012_hist.dat -nev 1e5 -ptmin_gen 400 -nimg 50000 -rseq 5 -mj-chg-phot-R 0.12 
+# Time started: 2019-04-09 15:40:21 (CEST) on host b7g23n0663.cern.ch.(none) in directory /pool/condor/dir_3734
+# generator is: Pythia8, version 8.223, tune py8tune_4C, rnd sequence 5, pi0 decay 0, B decay 0
 # beams are: P(7000), P(7000)
 # do_UE = 1
 # ptpow = -1
 # ptmin_gen = 400
-# requested number of events = 1000000
+# requested number of events = 100000
 #------ parameters ---------
 # emu.ptmin = 25
 # emu.rapmax = 2.5
 # jet.ptmin = 500
 # missing.ptmin = 30
 # mj-chg-R = -1
-# mj-chg-phot-R = -1
+# mj-chg-phot-R = 0.12
 # zmax = 0.3
 # zmin = 0.2
 #---------------------------
 # Delphes: DelphesConverter from card_file delphes_card_CMS_NoFastJet.tcl
+# MJRescaling for charged+photons: Minijet rescaling with particles selector=(is_charged || pdg_id==22), and jet_def_little_R=Longitudinally invariant Cambridge/Aachen algorithm with R = 0.12 and E scheme recombination
 # CommonAnalysis with e_ptmin = 25 and e_rapmax = 2.5, mu_ptmin = 25 and mu_rapmax = 2.5, hadron_rapmax = 1.79769e+308
 # jet def: Longitudinally invariant anti-kt algorithm with R = 1 and E scheme recombination (with user index addition)
 # btagger: Ideal b-tagger; no calorimeter.
 #---------------------------
-# time now = 2019-04-10 09:12:06 (CEST)
-# nev = 1000000
+# time now = 2019-04-09 18:06:14 (CEST)
+# nev = 100000
 # diagnostics: n_error = 0
 #--------------------------------------------
-# internal_total_xsc = 2.38458 nb
-# effective_lumi = 419362 nb^{-1}
+# internal_total_xsc = 2.38083 nb
+# effective_lumi = 42002.1 nb^{-1}
 # selected-jet-cross-section: xsc = 0 +- 0 nb (n entries = 0)
-# total cross section: xsc = 2.38458 +- 0 nb (n entries = 1000000)
-# <event multipliticity> = 418.539 +- 0.135188 (n entries = 1000000, over all events)
+# total cross section: xsc = 2.38083 +- 0 nb (n entries = 100000)
+# <event multipliticity> = 419.237 +- 0.427514 (n entries = 100000, over all events)
 # <selected-jet-pt> = -nan +- -nan (n entries = 0, wrt selected-jet-cross-section)
 #------------------------------
 # 2d_histlund-lnpt [nb/(x-axis units)/(y-axis units)] 
@@ -4381,6 +4382,8 @@
 # PDF:pSet = 8
 # PhaseSpace:bias2SelectionPow = 0.0
 # PhaseSpace:pTHatMin = 400.00000
+# Random:seed = 5
+# Random:setSeed = on
 # SigmaProcess:alphaSvalue = 0.13500
 # SpaceShower:alphaSvalue = 0.13700
 # SpaceShower:ecmRef = 1800.000
